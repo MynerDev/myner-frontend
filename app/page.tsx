@@ -20,6 +20,7 @@ import { AnalyticsPage } from "@/components/analytics-page"
 import { AdminPanel } from "@/components/admin-panel"
 import { ChannelSyncPage } from "@/components/channel-sync-page"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState("dashboard")
@@ -76,6 +77,7 @@ export default function Home() {
   return (
     <SidebarProvider>
       <SpeedInsights/>
+      <Analytics/>
       <div className="flex h-screen bg-background">
         <AppSidebar
           currentPage={currentPage}
