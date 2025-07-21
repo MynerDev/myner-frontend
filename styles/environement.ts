@@ -1,0 +1,1 @@
+export const prod_api_url = 'myner-backend-production.up.railway.app';

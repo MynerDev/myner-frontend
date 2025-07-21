@@ -178,7 +178,7 @@ export function ChannelSyncPage({ onToggleSidebar, sidebarCollapsed }: ChannelSy
       // In real implementation, this would be:
       // const response = await fetch('/api/telegram/my-channels')
 
-      const response: any = await apiGet(`http://localhost:8000/api/channels/list`);
+      const response: any = await apiGet(`/api/channels/list`);
       console.log("✅ API JSON response:", response);
 
       if (response.status == 'success') {

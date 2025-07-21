@@ -244,7 +244,7 @@ export function SearchPage({ onToggleSidebar, sidebarCollapsed }: SearchPageProp
 
     try {
       // Try to call the API
-      const response: any = await apiGet(`http://localhost:8000/api/products/search?query=${encodeURIComponent(query)}`);
+      const response: any = await apiGet(`/api/products/search?query=${encodeURIComponent(query)}`);
 
       console.log("✅ API JSON response:", response);
 

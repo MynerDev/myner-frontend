@@ -215,7 +215,7 @@ export function ChannelManager({ onToggleSidebar, sidebarCollapsed }: ChannelMan
         // In real implementation, this would be:
         // const response = await fetch('/api/telegram/my-channels')
 
-        const response: any = await apiGet(`http://localhost:8000/api/channels/saved/list`);
+        const response: any = await apiGet(`/api/channels/saved/list`);
         console.log("✅ API JSON response:", response);
 
         if (response.status == 'success') {
@@ -383,7 +383,7 @@ export function ChannelManager({ onToggleSidebar, sidebarCollapsed }: ChannelMan
     setSyncingChannels((prev) => new Set(prev).add(channel.id))
 
     try {
-      const response: any = await apiGet(`http://localhost:8000/api/channels/${channel.id}/messages/sync`)
+      const response: any = await apiGet(`/api/channels/${channel.id}/messages/sync`)
       console.log("✅ Sync API response:", response)
 
       if (response.status === "success") {

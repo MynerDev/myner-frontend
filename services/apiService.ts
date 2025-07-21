@@ -1,4 +1,9 @@
-export const apiGet = async (url: string) => {
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+export const apiGet = async (end_point: string) => {
+
+  let url: string = API_BASE_URL + end_point;
+
   try {
     const response = await fetch(url);
 
